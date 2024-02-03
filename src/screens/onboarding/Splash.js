@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 
 import colors from '../../constant/colors'
 import { images } from '../../assets/images/images'
 
-import { ModerateScale, VerticalScale, scale, moderateVerticalScale, verticalScale, moderateScale } from 'react-native-size-matters'
+import { useNavigation } from '@react-navigation/native'
+import { scale, moderateVerticalScale, verticalScale, moderateScale } from 'react-native-size-matters'
 
 const Splash = () => {
+    const navigation = useNavigation();
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("SelectUser")
+        }, 3000)
+    }, [])
+
     return (
         <View style={styles.container}>
             <Image style={styles.logo} source={images.Camera} />

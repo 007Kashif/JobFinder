@@ -47,4 +47,4 @@ const colors = {
     darkYellow: '#ECC713',
 };
 
-export default Colors;
+export default colors;
