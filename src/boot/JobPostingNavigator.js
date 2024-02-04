@@ -9,7 +9,7 @@ const Stack = createStackNavigator()
 
 const JobPostingNavigator = () => {
     return (
-        <Stack.Navigator initialRouteName='SingUpCompany'>
+        <Stack.Navigator>
             <Stack.Screen name='LoginCompany' component={LoginCompany} options={{ headerShown: false }} />
             <Stack.Screen name='SingUpCompany' component={SingUpCompany} options={{ headerShown: false }} />
         </Stack.Navigator>
